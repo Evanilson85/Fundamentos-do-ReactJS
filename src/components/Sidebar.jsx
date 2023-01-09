@@ -1,0 +1,27 @@
+import style from './Sidebar.module.css';
+import { PencilLine } from "phosphor-react";
+import { Avatar } from './avatar';
+
+export function Sidebar () {
+  return (
+    <aside className={style.sidebar}>
+      <img 
+        className={style.cover}
+        src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50" 
+      />
+      <div className={style.profile} >
+        <Avatar src='https://avatars.githubusercontent.com/u/61973912?v=4' />
+        {/* <img className={style.avatar} src="https://avatars.githubusercontent.com/u/61973912?v=4" alt="Evanilson" /> */}
+        <strong>Evanilson Manoel</strong>  
+        <span>Web Developer</span>
+      </div>
+
+      <footer>
+        <a href="#">
+          <PencilLine size={20} />
+          Editar o seu perfil
+        </a>
+      </footer>
+    </aside>
+  )
+}
